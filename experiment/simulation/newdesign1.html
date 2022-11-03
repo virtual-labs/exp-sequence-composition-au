@@ -110,8 +110,7 @@
         <div id="testbutton" align="center">
             <br>
             <input type="file" id="actual-btn" accept=".txt" hidden/>
-
-            <label for="actual-btn">Select a DNA sequence</label> &nbsp;&nbsp;
+            <label for="actual-btn">Select a DNA sequence </label> &nbsp;&nbsp;
 
             <input type="text" id="file-chosen" value="Filename displays here" />
             <br>
@@ -163,7 +162,7 @@
                 //document.getElementById("demo").insertAdjacentHTML('beforeend', cont);
                 var result = document.getElementById("file-content");
                 result.value = cont;
-                document.getElementById("colapse").innerHTML = "<button class=\"collapsible\">DNA Composition</button><div class=\"content\"><p align=\"left\"><input type=\"checkbox\" id=\"AT\" name=\"comp\" value=\"AT\">AT- Count	<br> <input type=\"checkbox\" id=\"GC\" name=\"comp\" value=\"GC\">GC- Count<br> <input type=\"checkbox\" id=\"A\" name=\"comp\" value=\"A\">A<br> <input type=\"checkbox\" id=\"T\" name=\"comp\" value=\"T\">T <br> <input type=\"checkbox\" id=\"G\" name=\"comp\" value=\"G\">G <br> <input type=\"checkbox\" id=\"C\" name=\"comp\" value=\"C\">C<br> <input type=\"checkbox\" id=\"all\" name=\"comp\" value=\"all\">All</p></div><button class=\"collapsible\">Case Conversion</button><div class=\"content\"><p><input type=\"radio\" id=\"Upper\" name=\"conv\" value=\"Upper\">Uppercase <br> <input type=\"radio\" id=\"Lower\" name=\"conv\" value=\"Lower\">Lowercase</p></div><button class=\"collapsible\">Transformation</button><div class=\"content\"> <p><input type=\"radio\" id=\"reverse\" name=\"reverse\" value=\"reverse\">Reverse Complement <br>  <input type=\"radio\" id=\"RNA\" name=\"reverse\" value=\"RNA\">RNA<br> </p></div><button class=\"collapsible\">Finalise</button><div class=\"content\"><p><input type=\"button\"  onclick=\"myFunction()\" id=\"Submit\" hidden> <label for=\"Submit\"> Submit</label> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href=\"newdesign1.html\"><input type=\"button\" id=\"Reset\" hidden><label for=\"Reset\">Reset</label></a></p></div><hr />";
+                document.getElementById("colapse").innerHTML = "<button class=\"collapsible\">DNA Composition</button><div class=\"content\"><p align=\"left\"><input type=\"checkbox\" id=\"AT\" name=\"comp\" value=\"AT\">AT- Count	<br> <input type=\"checkbox\" id=\"GC\" name=\"comp\" value=\"GC\">GC- Count<br> <input type=\"checkbox\" id=\"A\" name=\"comp\" value=\"A\">A<br> <input type=\"checkbox\" id=\"T\" name=\"comp\" value=\"T\">T <br> <input type=\"checkbox\" id=\"G\" name=\"comp\" value=\"G\">G <br> <input type=\"checkbox\" id=\"C\" name=\"comp\" value=\"C\">C<br> <input type=\"checkbox\" id=\"all\" name=\"comp\" value=\"all\">All</p></div><button class=\"collapsible\">Case Conversion</button><div class=\"content\"><p><input type=\"radio\" id=\"Upper\" name=\"conv\" value=\"Upper\">Uppercase <br> <input type=\"radio\" id=\"Lower\" name=\"conv\" value=\"Lower\">Lowercase</p></div><button class=\"collapsible\">Transformation</button><div class=\"content\"> <p><input type=\"radio\" id=\"reverse\" name=\"reverse\" value=\"reverse\">Reverse Complement <br>  <input type=\"radio\" id=\"RNA\" name=\"reverse\" value=\"RNA\">RNA<br> </p></div><button class=\"collapsible\">Finalise</button><div class=\"content\"><p><input type=\"button\"  onclick=\"myFunction()\" id=\"Submit\" value=\"Submit\" hidden> <label for=\"Submit\"> Submit</label> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href=\"newdesign1.html\"><input type=\"button\" id=\"Reset\" hidden><label for=\"Reset\">Reset</label></a></p></div><hr />";
 
                 var coll = document.getElementsByClassName("collapsible");
                 var i;
@@ -286,11 +285,11 @@
                 // Uppercase And Lowercase
                 var casechange=[];
                 if(document.getElementById('Upper').checked){
-                    casechange= "<br> <br> Sequence(in uppercase): <textarea id=\"res\" cols=\"63\" rows=\"5\">"+ newDNA.toUpperCase()+"</textarea> &nbsp;&nbsp;&nbsp;&nbsp;<button onclick=saveTextAsFile(res.value,'Seq_uppercase.txt')>Download result</button>";
+                    casechange= "<br> <br> Sequence(in uppercase): <textarea id=\"res_case\" cols=\"63\" rows=\"5\">"+ newDNA.toUpperCase()+"</textarea> &nbsp;&nbsp;&nbsp;&nbsp;<button onclick=saveTextAsFile(document.getElementById('res_case').innerHTML,'Seq_uppercase.txt')>Download result</button>";
                     //document.getElementById("demo").innerHTML = uppercase;
                 }
                 else if(document.getElementById('Lower').checked){
-                    casechange= "<br> <br> Sequence(in lowercase): <textarea id=\"res\" cols=\"63\" rows=\"5\">"+newDNA.toLowerCase()+"</textarea> &nbsp;&nbsp;&nbsp;&nbsp; <button onclick=saveTextAsFile(res.value,'Seq_lowercase.txt')>Download result</button>";
+                    casechange= "<br> <br> Sequence(in lowercase): <textarea id=\"res_case\" cols=\"63\" rows=\"5\">"+newDNA.toLowerCase()+"</textarea> &nbsp;&nbsp;&nbsp;&nbsp; <button onclick=saveTextAsFile(document.getElementById('res_case').innerHTML,'Seq_lowercase.txt')>Download result</button>";
                     //document.getElementById("demo").innerHTML = lowercase;
                 }
                 document.getElementById("result_disp").insertAdjacentHTML('beforeend', casechange);
@@ -322,41 +321,41 @@
                     
                     //document.getElementById("demo").innerHTML = DNA;
                     //document.getElementById("demo").insertAdjacentHTML('beforeend', dnaseq);
-                    document.getElementById("result_disp").insertAdjacentHTML('beforeend', "<br><br><br>Reverse compliment of the given sequence is: <textarea id=\"res\" cols=\"63\" rows=\"5\">"+rev+"</textarea> &nbsp;&nbsp;&nbsp;&nbsp; <button onclick=saveTextAsFile(res.value,'Reversecompliment.txt')>Download result</button>");
+                    document.getElementById("result_disp").insertAdjacentHTML('beforeend', "<br><br><br>Reverse compliment of the given sequence is: <textarea id=\"res_trans\" cols=\"63\" rows=\"5\">"+rev+"</textarea> &nbsp;&nbsp;&nbsp;&nbsp; <button onclick=saveTextAsFile(document.getElementById('res_trans').innerHTML,'Reversecompliment.txt')>Download result</button>");
 
                 }
                 else if(document.getElementById("RNA").checked){
                     var RNA=rev.replace(/T/ig, "U");
-                    document.getElementById("result_disp").insertAdjacentHTML('beforeend', "<br><br><br>RNA for the given sequence is :<textarea id=\"res\" cols=\"63\" rows=\"5\">"+RNA+"</textarea> &nbsp;&nbsp;&nbsp;&nbsp; <button onclick=saveTextAsFile(res.value,'Reversecompliment.txt')>Download result</button>");
+                    document.getElementById("result_disp").insertAdjacentHTML('beforeend', "<br><br><br>RNA for the given sequence is :<textarea id=\"res_trans\" cols=\"63\" rows=\"5\">"+RNA+"</textarea> &nbsp;&nbsp;&nbsp;&nbsp; <button onclick=saveTextAsFile(document.getElementById('res_trans').innerHTML,'RNA.txt')>Download result</button>");
                 }
 
 		}
-		     function saveTextAsFile(content,filename) {
-		    var textToWrite = content;
-		    var textFileAsBlob = new Blob([ textToWrite ], { type: 'text/plain' });
-		    var fileNameToSaveAs = filename //filename.extension
+        function saveTextAsFile(content,filename) {
+            var textToWrite = content;
+            var textFileAsBlob = new Blob([ textToWrite ], { type: 'text/plain' });
+            var fileNameToSaveAs = filename //filename.extension
 
-		    var downloadLink = document.createElement("a");
-		    downloadLink.download = fileNameToSaveAs;
-		    downloadLink.innerHTML = "Download File";
-		    if (window.webkitURL != null) {
-			// Chrome allows the link to be clicked without actually adding it to the DOM.
-			downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
-		    } else {
-			// Firefox requires the link to be added to the DOM before it can be clicked.
-			downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
-			downloadLink.onclick = destroyClickedElement;
-			downloadLink.style.display = "none";
-			document.body.appendChild(downloadLink);
-		    }
+            var downloadLink = document.createElement("a");
+            downloadLink.download = fileNameToSaveAs;
+            downloadLink.innerHTML = "Download File";
+            if (window.webkitURL != null) {
+                // Chrome allows the link to be clicked without actually adding it to the DOM.
+                downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+            } else {
+                // Firefox requires the link to be added to the DOM before it can be clicked.
+                downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+                downloadLink.onclick = destroyClickedElement;
+                downloadLink.style.display = "none";
+                document.body.appendChild(downloadLink);
+            }
 
-		    downloadLink.click();
-		}
+            downloadLink.click();
+        }
 
-		function destroyClickedElement(event) {
-		    // remove the link from the DOM
-		    document.body.removeChild(event.target);
-		}
+        function destroyClickedElement(event) {
+            // remove the link from the DOM
+            document.body.removeChild(event.target);
+        }
 
         </script>
     </body>
