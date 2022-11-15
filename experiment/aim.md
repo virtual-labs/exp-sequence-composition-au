@@ -1,5 +1,3 @@
-### Aim of the experiment
-
 &nbsp;
 
 •	To analyze the general compositional features of a given DNA sequence.
