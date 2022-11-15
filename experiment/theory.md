@@ -122,7 +122,9 @@ Percentage of AT and GC is known to reveal a lot of things about the DNA under s
 
 1. Get a DNA sequence in FASTA format.
 
-  Eg: >CG891703.1 Ygmt330P6 Yunnan snub-nosed monkey genomic BAC library Rhinopithecus bieti genomic clone 330P6, genomic survey sequence
+  Eg:
+  >CG891703.1 Ygmt330P6 Yunnan snub-nosed monkey genomic BAC library Rhinopithecus bieti genomic clone 330P6, genomic survey sequence
+  
   TTTCTGCCAGGACTCTTGATGATGTGCGGTTTGCTTTCAGGGATAGGAAGATAAAAACGCTAAAAGAAGA
   CAAAAATATTAACACAATAATAAAAAAAAAAAGCCAGAAAAAATAGTAGTTTTTCAAGAACACTTCAGAA
   TCCTGATACTTTACATGAACCAAGAAATATAGACATAAAAAAGAGACACACACCTGTAAGGAGAGATGAG
@@ -135,6 +137,7 @@ Percentage of AT and GC is known to reveal a lot of things about the DNA under s
 2. Split the sequence using line break.
 
   Eg: 
+  
   Line:1- >CG891703.1 Ygmt330P6 Yunnan snub-nosed monkey genomic BAC library Rhinopithecus bieti genomic clone 330P6, genomic survey sequence
 
   Line:2- TTTCTGCCAGGACTCTTGATGATGTGCGGTTTGCTTTCAGGGATAGGAAGATA
@@ -143,37 +146,54 @@ Percentage of AT and GC is known to reveal a lot of things about the DNA under s
   Line:3- CAAAAATATTAACACAATAATAAAAAAAAAAAGCCAGAAAAAATAGTAGTTTTTCAAGAACACTTCAGAA     Etc.
 
 3. Remove the first line.
-  Eg: 
+
+  Eg:
+  
   Line:1- TTTCTGCCAGGACTCTTGATGATGTGCGGTTTGCTTTCAGGGATAGGAAGATA
   AAAACGCTAAAAGAAGA
 
   Line:2- CAAAAATATTAACACAATAATAAAAAAAAAAAGCCAGAAAAAATAGTAGTTTTTCAAGAACACTTCAGAA     Etc.
 
 4. Join the entire sequence.
-  Eg: TTTCTGCCAGGACTCTTGATGATGTGCGGTTTGCTTTCAGGGATAGGAAGATAAAAACGCTAAAAGAAGACAAAAATATTAACACAATAATAAAAAAAAAAAGCCAGAAAAAATAGTAGTTTTTCAAGAACACTTCAGAATCCTGATACTTTACATGAACCAAGAAATATAGACATAAAAAAGAGACACACACCTGTAAGGAGAGATGAGACACAGGACTGGGTTACTTTTGATGAAGAGGCTTCTTACCAGTTACAACTGAAGTGAGTAAGAAGAAATTAGCTACTTTTTTCAAGATCTGTGGTAGATAAAATGTAGGTCAGTTTGAGTCTGAAATAAATGGAGGAGTGAAATACAGAAGTACAGGGATAGAGAGACAGAACATAAATCTAAGTTACCAACATCAGGAATAAAAAAGAGGACATTAATACAGACAGAAATTATGAATATCAGAATATAATAGATGTTATGAACAATTCTTTAGCACTAATTTTGACACTTTAATGAAGTGGACAAAATAGTTAACACACACACACACACAACTTATCA
+
+  Eg:
+  TTTCTGCCAGGACTCTTGATGATGTGCGGTTTGCTTTCAGGGATAGGAAGATAAAAACGCTAAAAGAAGACAAAAATATTAACACAATAATAAAAAAAAAAAGCCAGAAAAAATAGTAGTTTTTCAAGAACACTTCAGAATCCTGATACTTTACATGAACCAAGAAATATAGACATAAAAAAGAGACACACACCTGTAAGGAGAGATGAGACACAGGACTGGGTTACTTTTGATGAAGAGGCTTCTTACCAGTTACAACTGAAGTGAGTAAGAAGAAATTAGCTACTTTTTTCAAGATCTGTGGTAGATAAAATGTAGGTCAGTTTGAGTCTGAAATAAATGGAGGAGTGAAATACAGAAGTACAGGGATAGAGAGACAGAACATAAATCTAAGTTACCAACATCAGGAATAAAAAAGAGGACATTAATACAGACAGAAATTATGAATATCAGAATATAATAGATGTTATGAACAATTCTTTAGCACTAATTTTGACACTTTAATGAAGTGGACAAAATAGTTAACACACACACACACACAACTTATCA
 
 5. Split the sequence into each nucleotide and save it to an array.
+
  Eg:
+ 
  Array_1=
  T T T C T G C C A G G A C T C T T G A T G A T G T G C  G G T T T G C T T  T C A G G G A T A G G A A G A T A A A A A C G C T A A A A G A A G A C A A A A A T A T T A A C A C A A T A A T A A A A A A A A A A A G C C A G A A A A A A T A G T A G T T T T T C A A G A A C A C T T C A G A A T C C T G A T A C T T T AC A T  G A  A C C A A G A A A T A T A G A C A T A A A A A A G A G A C A C A C A C C T G T A A G G A G A G A T G A G A C A C A G G A C T G G G T T A C T T T T G A T G A A G A G G C T T C T T A C C A G T T A C A A C T G A A G T G A G T A A G A A G A A A T T A G C T A C T T T T T T C A A G A T C T G T G G T A G A T A A A A T G T  A G G T C A G T T T G A G T C T G A A A T A A A T G G A G G A G T G A A A T A C A G A A G T A C A G G G A T A G A G A G A C A G A A C A T A A A T C T A A G T T A C C A A C A T C A G G A A T A A A A A A G A G G A C A T T A A T A C A G A C A G A A A T T A T G A A T A T C A G A A T A T A A T A G A T G T T A T G A A C A A T T C T T T A G C A C T A A T T T T G A C A C T T T A A T G A A G T G G A C A A A A T A G T T A A C A C A C A C A C A C A C A C A A C T T A T C A
 
 6. Count the A, C, T, G count in the sequence and plot a pie diagram using ‘Plotly’
-  Eg: 
+
+  Eg:
+  
   A= 235
+  
   G= 103
+  
   C= 77
+   
   T= 134
 
 7. Calculate the percentage of AT- content and GC-content in the sequence using the equation
+
   GC-content= (G + C / A + T + G + C) * 100%
+   
   AT-content= (A + T / A + T + G + C) * 100%
   
   Eg:
+  
   AT-content (%) = 67.21311475409836
+  
   GC-content (%) = 32.78688524590164
 
 8. Join the array to do case conversion. According to user’s request case conversion can developed by using the methods ‘toUpperCase()’ (for converting the sequence to uppercase) and ‘toLowerCase’() (for converting the sequence to lowercase).
+
   Eg:
+  
   Uppercase: 
   TTTCTGCCAGGACTCTTGATGATGTGCGGTTTGCTTTCAGGGATAGGAAGATAAAAACGCTAAAAGAAGACAAAAATATTAACACAATAATAAAAAAAAAAAGCCAGAAAAAATAGTAGTTTTTCAAGAACACTTCAGAATCCTGATACTTT……
 
@@ -181,25 +201,34 @@ Percentage of AT and GC is known to reveal a lot of things about the DNA under s
   tttctgccaggactcttgatgatgtgcggtttgctttcagggataggaagataaaaacgctaaaagaagacaaaaatattaacacaataataaaaaaaaaaagccagaaaaaatagtagtttttcaagaacacttcagaatcctgatacttt……
 
 9. For reverse compliment, create a new array (Array_2). From the last element of Array_1 to the first element, replace and push all ‘A’ with ‘T’, wise versa and replace all ‘G’ with ‘C’, wise versa into Array_2.
+
   Eg:
+  
   Array_2=
   T G A T A A G T T G T G T G T G T G T G T G T G T T A A C T A T T T T G T C C A C T T C A T T A A A G T G T C A A A A T T A G T G C T A A A G A A T T G T T C A T A A C A T C T A T T A T A T T C T G AT A T  T…..
 
 10. Join the Array_2.
+
   Eg:
+  
   Reverse compliment:
   TGATAAGTTGTGTGTGTGTGTGTGTTAACTATTTTGTCCACTTCATTAAAGTGTCAAAATTAGTGCTAAAGAATTGTTCATAACATCTATTATATTCTGATATTCATAATTTCTGTCTGTATTAAT…….
 
 
 11. To create RNA for the sequence, replace all the ‘T’ with ‘U’ in Array_2 and save that into a new array (Array_3).
+
   Eg:
+  
   Array_3=
   U G A U A A G U U G U G U G U G U G U G U G U G U U A A C U A U U U UG U C C A C U U C A U U A A A G U G U C A A A A U U A G U G C U A A A G A A U U G U U C A U A A CA U C U A U U A U A U U C U G A U A U U C A U A A U U U C U G U C U G U A U U A A U……
 
 12. Join the Array_3.
-  Eg: 
+
+  Eg:
+  
   RNA=
   UGAUAAGUUGUGUGUGUGUGUGUGUUAACUAUUUUGUCCACUUCAUUAAAGUGUCAAAAUUAGUGCUAAAGAAUUGUUCAUAACAUCUAUUAUAUUCUGAUAUUCAUAAUUUCUGUCUGUAUUAAU…..
+
 
 **Input Data Collection & Analysis:**
 
