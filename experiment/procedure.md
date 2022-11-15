@@ -36,35 +36,38 @@
 
 &nbsp; 
 
-b. The **Case Conversion** button has radio button for converting sequence to **Uppercase** and **Lowercase**. Selection (click) of that will display the DNA sequence in either Uppercase letter mode or lowercase letter mode.
+ b. The **Case Conversion** button has radio button for converting sequence to **Uppercase** and **Lowercase**. Selection (click) of that will display the DNA sequence in either Uppercase letter mode or lowercase letter mode.
  
 
 <center><img src="images/7.png" title="" /></center>
 
+
 <center><img src="images/8.png" title="" /></center>
+
  
 Here, in this case, lowercase is selected and the GUI displayed the sequence in lowercase. User can click on “ Download result” button and can save the file in .txt format in personal computer.
 
 &nbsp; 
 
-9.	The button “Transformation” included two choices; Reverse Complement and RNA. 
+ c. The button **Transformation** includes two choices; one to find the **Reverse Complement** and one to find the **RNA**. 
  
 <center><img src="images/9.png" title="" /></center>
 
 &nbsp; 
 
-10.	If the user click on Reverse Complement, the reverse complement of the selected sequence will be displayed which can be downloaded and can be saved as .txt format.
+   i. If the user click on **Reverse Complement**, the reverse complement of the selected sequence will be displayed which can be downloaded and can be saved as .txt format.
 
 <center><img src="images/10.png" title="" /></center>
 
 &nbsp; 
  
-11.	If the user click on RNA, specific RNA sequence is displayed which can also be downloaded and can be saved as .txt format.
+  ii. If the user click on **RNA**, specific RNA sequence is displayed which can also be downloaded and can be saved as .txt format.
+
 
 <center><img src="images/11.png" title="" /></center>
 
 &nbsp; 
 
-12.	Click on Reset button to reset the simulator window. 
+4. The user can click on **Reset** button to reset the simulator window back to step 1. 
 
 <center><img src="images/12.png" title="" /></center>
