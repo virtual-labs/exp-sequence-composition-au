@@ -1,0 +1,561 @@
+<!DOCTYPE html><html lang="en"><head>
+      <!--Google Tag Manager-->
+      <script class="gtm">
+        var dataLayer = [{
+        'labName': 'Virtual Lab',
+        'discipline': 'Test',
+        'college': 'AU',
+        'phase': 'Testing',
+        'expName': 'TO ANALYZE THE SEQUENCE OF A GIVEN DNA AND FIND OUT SEQUENCE COMPOSITION',
+        'expShortName': 'sequence-composition'
+        }];
+    
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5NMQ9NQ');
+      </script>
+      <!--End Google Tag Manager-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    
+    	<meta name="experiment-short-name" content="sequence-composition">
+    	<meta name="developer-institute" content="AU">
+    	<meta name="learning-unit" content="TO ANALYZE THE SEQUENCE OF A GIVEN DNA AND FIND OUT SEQUENCE COMPOSITION">
+    	<meta name="task-name" content="Theory">
+    
+    <!-- For iPhone -->
+    <meta name="msapplication-TileColor" content="#4076e0">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#4076e0">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#4076e0">
+    <title>Virtual Labs</title>
+    <link rel="shortcut icon" href="./assets/images/favicon.ico">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css" integrity="sha512-Oy18vBnbSJkXTndr2n6lDMO5NN31UljR8e/ICzVPrGpSud4Gkckb8yUpqhKuUNoE+o9gAb4O/rAxxw1ojyUVzg==" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Raleway&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/github-markdown.min.css">
+    <link rel="stylesheet" href="./assets/css/vlabs-style.css">
+    <link rel="stylesheet" href="./assets/css/katex.min.css">
+    
+    <script src="./assets/js/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <style>
+      h1 {
+      font-size: 1.8rem;
+      }
+      h2 {
+      font-size: 1.4rem;
+      }
+      h3 {
+      font-size: 1.2rem;
+      }
+
+      h2, h3 {
+      font-weight: 800;
+      }
+    </style>
+    
+  </head>
+  <body class="p-0 container-fluid vlabs-page d-flex flex-column justify-content-between">
+      <!--Google Tag Manager (noscript)-->
+      <noscript class="gtm">
+        <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-5NMQ9NQ" style="display:none;visibility:hidden" width="0">
+        </iframe>
+      </noscript>
+      <!--End Google Tag Manager (noscript)-->
+  
+      <header class="vlabs-header sticky-top bg-white">
+        <nav class="p-0 navbar navbar-light d-flex align-items-stretch">
+          
+          <button class="navbar-toggler px-4" type="button" onclick="toggle()">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="d-flex justify-content-center">        
+            <a href="https://vlab.co.in" class="navbar-brand">
+              <img src="./assets/images/vlabs-color-small-moe.jpg" alt="vlabs logo" class="vlabs-logo">
+            </a>
+          </div>
+          
+          <div id="headerNavbar" class="d-none border-top flex-grow-1 d-lg-flex align-items-center justify-content-end">
+              <bug-report id="bug-report" title="[BUG REPORT] TO ANALYZE THE SEQUENCE OF A GIVEN DNA AND FIND OUT SEQUENCE COMPOSITION" page-type="text" context-info="{&quot;organisation&quot;:&quot;Virtual Labs&quot;,&quot;developer_institute&quot;:&quot;AU&quot;,&quot;expname&quot;:&quot;TO ANALYZE THE SEQUENCE OF A GIVEN DNA AND FIND OUT SEQUENCE COMPOSITION&quot;,&quot;labname&quot;:&quot;Virtual Lab&quot;,&quot;phase&quot;:&quot;Testing&quot;}" checkbox-json="{&quot;text&quot;:[&quot;Insufficient Content&quot;],&quot;video&quot;:[&quot;Insufficient Content&quot;],&quot;assesment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;simulation&quot;:[&quot;Simulation Not Working&quot;,&quot;Incorrect Results/Observations&quot;,&quot;Insufficient/Incorrect Instructions&quot;],&quot;DEFAULT&quot;:[&quot;Page Not Loading&quot;,&quot;Content Not Visible&quot;,&quot;Incorrect Content&quot;]}" button_style="border: none; color: #fff; background-color: #288ec8; text-align: center; font-size: 1.05rem; border-radius: 1em;padding: 0.6em 1.2em; margin: 0 10px" position="override" custom_button_class="v-button"></bug-report>
+          </div>
+        </nav>
+      </header>
+      <div class="container-fluid flex-fill d-flex flex-column vlabs-page-main">
+        <div class="row d-flex justify-content-between">
+          <div class="flex-column">
+          <div class="row py-4 px-4 breadcrumbs">
+          	<div class="title is-4 tools">Tools</div>
+          	<span class="mx-2">
+          		<i aria-hidden="true" class="fa fa-angle-right"></i>
+          	</span>
+          	<a href="performance-report.html" class="my-2" target="_blank">
+          		<button class="v-button">Performance Tool</button>
+          	</a>
+          </div>
+          </div>
+        </div>
+        <div class="row flex-grow-1 d-flex flex-nowrap flex-column flex-lg-row">
+          <div class="modal fade popupmenu" id="popupMenu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">
+                              <a href="https://vlab.co.in" class="navbar-brand">
+                                  <img src="./assets/images/vlabs-color-small-moe.jpg" alt="vlabs logo" class="vlabs-logo">
+                              </a>
+                          </h5>
+                          <button type="button" class="btn-close align-self-center" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body nav-menu">
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="index.html" class="p-2 ">
+                                      Aim
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="theory.html" class="p-2  current-item ">
+                                      Theory
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="pretest.html" class="p-2 ">
+                                      Pretest
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="procedure.html" class="p-2 ">
+                                      Procedure
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="simulation.html" class="p-2 ">
+                                      Simulation
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="posttest.html" class="p-2 ">
+                                      Posttest
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="references.html" class="p-2 ">
+                                      References
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="feedback.html" class="p-2 ">
+                                      Feedback
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="nav flex-column sidebar nav-menu flex-shrink-0 px-lg-4 align-items-center align-items-lg-start hidden d-none d-lg-flex" id="menu">
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="index.html" class="p-2 ">
+                        Aim
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="theory.html" class="p-2  current-item ">
+                        Theory
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="pretest.html" class="p-2 ">
+                        Pretest
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="procedure.html" class="p-2 ">
+                        Procedure
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="simulation.html" class="p-2 ">
+                        Simulation
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="posttest.html" class="p-2 ">
+                        Posttest
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="references.html" class="p-2 ">
+                        References
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="feedback.html" class="p-2 ">
+                        Feedback
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+          </div>          <div class="vlabs-page-content px-5 pb-4 flex-grow-1 markdown-body">
+            <div class="text-center fix-spacing">
+              <h2 id="to-analyze-the-sequence-of-a-given-dna-and-find-out-sequence-composition">To analyze the sequence of a given DNA and find out sequence composition</h2>
+          
+            </div>
+              <h2 id="introduction">Introduction</h2>
+          <p>&nbsp;
+          With the rapid advent of high-throughput DNA sequencing, deep insights into genomic composition are needed to understand evolutionary aspects, structural and functional properties, and organization profiles of specific genomes of interest. High-throughput next-generation and third-generation sequencing techniques have been advancing as robust methods in developing DNA sequencing technology. In order to study genomic architecture, it is important to analyze genomic nucleotide composition, which is represented as the proportion of Adenine and Thymine (Uracil in the case of RNA), and guanine and cytosine bases in the DNA molecule.  Specifically, genomic DNA base composition (GC content) is essential for predicting genome functioning and species ecology. It has been noted that the biological significance of GC content in various organisms remains unclear due to the lack of insufficient genomic data. In the interdisciplinary field of life sciences, bioinformatics research has applications in molecular and genomic sequence analysis, genome annotation, expression profiling, drug designing, and so on. Even though many web-based tools were readily available for studying the basics of the molecular process including sequence-based data analysis and visualization techniques, the lack of standardized user-friendly interfaces makes it difficult for users to learn how to use the tools, and to translate the given data formats from one format to another; therefore studying the sequence composition in a given biological sequence be a difficult task for beginners and biologists. </p>
+          <p>The purpose of this experiment is to provide a user-interactive platform for facilitating the computation of nucleotide composition within a given sequence.
+          &nbsp;</p>
+          <h2 id="theory">Theory</h2>
+          <p>&nbsp;
+          All organisms have genetic material, the hereditary substance in the cell, which is stored either in the nucleus of eukaryotes (plants and animals) or in the cytoplasm of prokaryotic organisms (bacteria). In some cases, the genetic material is found in the extracellular sites such as mitochondria and chloroplast.  It functions to carry all the necessary information specific to an organism. Generally, the genetic material of a cell can either be a gene or a group of genes or conserved in molecules called nucleic acids which is a DNA (Deoxyribonucleic Acid) or RNA (Ribonucleic Acid) molecules. Nucleotides are the building blocks for nucleic acids, which are of five types are of five types namely Adenine (A), Cytosine (C), Guanine (G), Thymine (T), and Uracil (U). A nucleotide is composed of three components (Phosphate group, Ribose sugar, and Nitrogenous base) which are linked together. Depending on the type of the nitrogenous base, it is classified as purines (two rings: G, A) and pyrimidines (one ring: C, U, T). Ribose sugar and nitrogenous bases differ in DNA and RNA. Briefly, DNA and RNA molecules are polymers that are made up of long chains of nucleotides.
+          &nbsp;</p>
+          <h3 id="deoxyribonucleic-acid">Deoxyribonucleic acid</h3>
+          <p>&nbsp;
+          DNA is the hereditary material that carries information and functions in the growth of organisms and replication processes. It is noted that a basic understanding of DNA composition is a key factor in the structure and function prediction of longer biological relevant molecules that transfers genetic information from generation to generation. The x-ray diffraction analysis of DNA in the early 1950’s revealed DNA composition as two polymer strands coiled into a helix. In humans, the genetic material is seen in the form of double-stranded DNA molecules with a double helical structure, containing a sequence of nucleotides to form two DNA strands. In general, DNA has two long complementary double-helical strands with different combinations composed of four nucleotide subunits (guanine (G), cytosine (C), adenine (A), and thymine (T) (Fig.1). The polynucleotide strand consists of a nitrogenous base, deoxyribose sugar and a phosphate group. The nucleotide is named depending on the nitrogenous base. The sugar is deoxyribose in DNA.</p>
+          <p>Even though it is stated that the most common form of DNA is a double helix, there is scientific evidence of branched DNA, quadruplex DNA, and DNA with triple strands while studying molecular and topological features in nucleic acid research. </p>
+          <p>&nbsp;</p>
+          <center><img src="images/1.png" title=""></center>
+          
+          <center>Fig.1. Diagrammatic representation of DNA. The figure depicts the base composition, sugar and phosphate backbone and hydrogen bonding with the base pairs.</center>
+          
+          <p>&nbsp;</p>
+          <center>Image source: https://en.wikipedia.org/wiki/Molecular_Structure_of_Nucleic_Acids:_A_Structure_for_Deoxyribose_Nucleic_Acid#/media/File:DNA-structure-and-bases.png</center>
+          
+          <p>&nbsp;</p>
+          <p>The two strands of the DNA are anti-parallel in nature where the 3′ end of one strand faces the 5′ end of the other strand.</p>
+          <p>&nbsp;</p>
+          <p>Example of a DNA sequence in FASTA format</p>
+          <p>&gt;AK038513.1 Mus musculus adult male hypothalamus cDNA, RIKEN full-length enriched library, clone: A230021I18 product:Potassium channel ERG2 (FRAGMENT) homolog [Ratus ratus], full insert sequence
+          GACTTATGTACGCCAGCATCTTTGGCAACGTGTCGGCCATCATCCAGCGCCTGTACTCAGGCACGGCTCG
+          CTACCACACTCAGATGCTGCGGGTCAAGGAGTTCATCCGCTTCCACCAGATCCCCAACCCACTGAGGCAG
+          CGCCTGGAAGAGTATTTCCAGCACGCCTGGTCCTACACCAATGGCATCGACATGAACGCGGTGCTGAAAG
+          GCTTCCCTGAGTGCCTGCAGGCGGACATCTGCCTGCACCTGCACCGCGCTCTGTTGCAGCACTGCCCCGC
+          CTTCCGCGGCGCCAGCAAGGGGTGCCTGCGCGCGCTCGCCGTCAAGTTCAAGACCACGCACGCGCCGCCT
+          GGGGACACGCTGGTGCACCTGGGCGACGTGCTTTCCACTCTCTACTTCATCTCCCGCGGCTCCATCGAGA
+          TCCTGCGCGATGACGTGGTCGTGGCCATTCTAGGGAAGAATGACATCTTTGGGGAGCCTGCCAGTCTCCA
+          TGCCAGACCAGGCAAATCAAGCGCCGATGTGCGTGCCCTGACCTACTGCGACCTGCACAAGATCCATCGA
+          GCAGACCTGCTGGAGGTGCTGGACATGTACCCCGCCTTTGCAGATACCTTCTGGAATAAGCTAGAGGTCA</p>
+          <p>&nbsp;</p>
+          <p>A reverse complement of a DNA sequence is obtained by reversing the base pairs order, followed by interchanging A and T and interchanging C and G. 
+          For example, the reverse complement of ACCTGAG is CTCAGGT.
+          &nbsp;</p>
+          <h3 id="chargaffs-rules">Chargaff's rules</h3>
+          <p> In 1952, Elson Chargaff, an Austrian chemist, proposed a rule that the DNA of any cell, organism, or species should possess pyrimidine and purines in a 1:1 ratio. This indicates that the amount of guanine in a DNA is always equal to the amount of cytosine, similarly, the amount of adenine is equal to the amount of thymine. Adenine pairs with thymine to form a base pair with 2 hydrogen bonds (A=T), and Guanine pairs with the complementary cytosine to form a base pair with three forming hydrogen bonds (G ≡ C). Based on this hydrogen bonding property, A and T form the weakest bond, and G and C form the strongest bond.</p>
+          <p>A series of rules related to DNA structure and stability introduced by Chargaff is known as Chargaff’s parity rules. According to the rule, a double-stranded DNA possesses a percentage of base pair equality. That means %A in a DNA = %T in a DNA and the same case with %G and  %C in a sequence. This rule is in validation with the basis of DNA structure proposed by Watson and Crick. The rule related to the global base pairing composition of DNA in a single strand indicates that %A ~ %T and %G ~ %C is valid for each of the two DNA strands. The difference in the percentage of nitrogenous bases in different organisms resulted in variations of species. 
+          &nbsp;</p>
+          <h3 id="ribonucleic-acid">Ribonucleic acid</h3>
+          <p>RNA is the genetic material and carrier of genetic codes in some viruses that replaces DNA molecules. Ribose is the sugar in RNA, and the nitrogenous bases in RNA are adenine, guanine, cytosine, and uracil, which replace thymine in DNA. RNA is a single-stranded helix molecule with shorter chains of nucleotides. RNA functions to code for amino acids thereby acting as a messenger between DNA and ribosomes during the translation process to make proteins.
+          &nbsp;</p>
+          <h3 id="quadruplex-dna">Quadruplex DNA</h3>
+          <p>DNA or RNA sequences rich in Guanine base tend to fold into four strands with hydrogen bonds leading (quadruple helix structure) to non-canonical secondary structures termed as G-quadruplexes (G4s). G4 structures in the context of genomic DNA were noted thoroughly after the analysis of the crystal structure of a G4 formed by the human telomeric DNA sequence. Studies reported the importance of G4s in genetic functions such as transcription and replication, understanding the stability of the genome, and studying epigenetic features of the genome. </p>
+          <p>In a broader sense, G4s are promising for the following mechanisms.</p>
+          <ol>
+          <li><p>   For studying the processes and control mechanisms in cancer biology.</p>
+          </li>
+          <li><p>   Target for drug discovery in cancer, aging, and neurological diseases.</p>
+          </li>
+          </ol>
+          <p>&nbsp;</p>
+          <h3 id="genomic-composition-and-its-implications">Genomic Composition and its implications</h3>
+          <ol>
+          <li><p>   GC-rich regions have pivotal importance in techniques like PCR or DNA sequencing.</p>
+          </li>
+          <li><p>   It has been revealed that sequence with higher GC content has higher thermal stability than adenine: thymine pairs.
+          GC content Calculation equation:  (G + C / A + T + G + C) * 100%
+          For calculating the ratio of AT/GC, use the equation: A + T/ G + C</p>
+          </li>
+          <li><p> G +C rich regions are prone to liable mutation.</p>
+          </li>
+          <li><p> GC content has a specific role in evolutionary genomics.</p>
+          </li>
+          </ol>
+          <h3 id="pedagogical-aspects">Pedagogical Aspects</h3>
+          <p>•    User can count both percentage of AT and GC and number/percentage wise distribution of A, T, G.C from the FASTA format of the nucleotide sequence.</p>
+          <p>•    User can convert the sequence to Uppercase/Lowercase depending on the purpose of the study.</p>
+          <p>•    Can obtain the Reverse Complement and the corresponding RNA sequence. </p>
+          <p>&nbsp;</p>
+          <p>The present simulator modified to identify</p>
+          <ol>
+          <li><p>Easy accessibility of DNA sequence composition.</p>
+          </li>
+          <li><p>Conversion of DNA sequence into its reverse complement as well as RNA in a single platform </p>
+          </li>
+          <li><p>User-friendly approach in the total composition of DNA to identify its stability. </p>
+          </li>
+          </ol>
+          <h3 id="algorithm-for-developing-a-simulator-for-calculating-the-dna-composition">Algorithm for developing a simulator for calculating the DNA composition</h3>
+          <p><strong>Step 1: Problem Definition:</strong></p>
+          <p>To evaluate a specific DNA sequence's general compositional characteristic and assess the genome's biological functions and organizational structure using quantitative methods. </p>
+          <p><strong>Step 2: Project Planning &amp; System Definition:</strong></p>
+          <p>Percentage of AT and GC is known to reveal a lot of things about the DNA under study. Likewise the distribution of A, T, G, and C counts also specifies the nature of DNA under study. Some of the softwares used for bioinformatic analysis are case sensitive, which may demand the need of converting the sequence format from uppercase to lowercase and viceversa. With the same sequence, there can be simple transformations possible like finding the reverse complement or even the RNA. Using this simulator, the user can do all these simple calculations,conversions or transormations.</p>
+          <p><strong>Step 3: Model Formulation:</strong></p>
+          <ol>
+          <li><p>Get a DNA sequence in FASTA format.</p>
+          <p>Eg:</p>
+          <blockquote>
+          <p>CG891703.1 Ygmt330P6 Yunnan snub-nosed monkey genomic BAC library Rhinopithecus bieti genomic clone 330P6, genomic survey sequence</p>
+          </blockquote>
+          <p>TTTCTGCCAGGACTCTTGATGATGTGCGGTTTGCTTTCAGGGATAGGAAGATAAAAACGCTAAAAGAAGA
+          CAAAAATATTAACACAATAATAAAAAAAAAAAGCCAGAAAAAATAGTAGTTTTTCAAGAACACTTCAGAA
+          TCCTGATACTTTACATGAACCAAGAAATATAGACATAAAAAAGAGACACACACCTGTAAGGAGAGATGAG
+          ACACAGGACTGGGTTACTTTTGATGAAGAGGCTTCTTACCAGTTACAACTGAAGTGAGTAAGAAGAAATT
+          AGCTACTTTTTTCAAGATCTGTGGTAGATAAAATGTAGGTCAGTTTGAGTCTGAAATAAATGGAGGAGTG
+          AAATACAGAAGTACAGGGATAGAGAGACAGAACATAAATCTAAGTTACCAACATCAGGAATAAAAAAGAG
+          GACATTAATACAGACAGAAATTATGAATATCAGAATATAATAGATGTTATGAACAATTCTTTAGCACTAA
+          TTTTGACACTTTAATGAAGTGGACAAAATAGTTAACACACACACACACACAACTTATCA</p>
+          </li>
+          <li><p>Split the sequence using line break.</p>
+          <p>Eg: </p>
+          <p>Line:1- &gt;CG891703.1 Ygmt330P6 Yunnan snub-nosed monkey genomic BAC library Rhinopithecus bieti genomic clone 330P6, genomic survey sequence</p>
+          <p>Line:2- TTTCTGCCAGGACTCTTGATGATGTGCGGTTTGCTTTCAGGGATAGGAAGATA
+          AAAACGCTAAAAGAAGA</p>
+          <p>Line:3- CAAAAATATTAACACAATAATAAAAAAAAAAAGCCAGAAAAAATAGTAGTTTTTCAAGAACACTTCAGAA     Etc.</p>
+          </li>
+          <li><p>Remove the first line.</p>
+          <p>Eg:</p>
+          <p>Line:1- TTTCTGCCAGGACTCTTGATGATGTGCGGTTTGCTTTCAGGGATAGGAAGATA
+          AAAACGCTAAAAGAAGA</p>
+          <p>Line:2- CAAAAATATTAACACAATAATAAAAAAAAAAAGCCAGAAAAAATAGTAGTTTTTCAAGAACACTTCAGAA     Etc.</p>
+          </li>
+          <li><p>Join the entire sequence.</p>
+          <p>Eg:
+          TTTCTGCCAGGACTCTTGATGATGTGCGGTTTGCTTTCAGGGATAGGAAGATAAAAACGCTAAAAGAAGACAAAAATATTAACACAATAATAAAAAAAAAAAGCCAGAAAAAATAGTAGTTTTTCAAGAACACTTCAGAATCCTGATACTTTACATGAACCAAGAAATATAGACATAAAAAAGAGACACACACCTGTAAGGAGAGATGAGACACAGGACTGGGTTACTTTTGATGAAGAGGCTTCTTACCAGTTACAACTGAAGTGAGTAAGAAGAAATTAGCTACTTTTTTCAAGATCTGTGGTAGATAAAATGTAGGTCAGTTTGAGTCTGAAATAAATGGAGGAGTGAAATACAGAAGTACAGGGATAGAGAGACAGAACATAAATCTAAGTTACCAACATCAGGAATAAAAAAGAGGACATTAATACAGACAGAAATTATGAATATCAGAATATAATAGATGTTATGAACAATTCTTTAGCACTAATTTTGACACTTTAATGAAGTGGACAAAATAGTTAACACACACACACACACAACTTATCA</p>
+          </li>
+          <li><p>Split the sequence into each nucleotide and save it to an array.</p>
+          <p>Eg:</p>
+          <p>Array_1=
+          T T T C T G C C A G G A C T C T T G A T G A T G T G C  G G T T T G C T T  T C A G G G A T A G G A A G A T A A A A A C G C T A A A A G A A G A C A A A A A T A T T A A C A C A A T A A T A A A A A A A A A A A G C C A G A A A A A A T A G T A G T T T T T C A A G A A C A C T T C A G A A T C C T G A T A C T T T AC A T  G A  A C C A A G A A A T A T A G A C A T A A A A A A G A G A C A C A C A C C T G T A A G G A G A G A T G A G A C A C A G G A C T G G G T T A C T T T T G A T G A A G A G G C T T C T T A C C A G T T A C A A C T G A A G T G A G T A A G A A G A A A T T A G C T A C T T T T T T C A A G A T C T G T G G T A G A T A A A A T G T  A G G T C A G T T T G A G T C T G A A A T A A A T G G A G G A G T G A A A T A C A G A A G T A C A G G G A T A G A G A G A C A G A A C A T A A A T C T A A G T T A C C A A C A T C A G G A A T A A A A A A G A G G A C A T T A A T A C A G A C A G A A A T T A T G A A T A T C A G A A T A T A A T A G A T G T T A T G A A C A A T T C T T T A G C A C T A A T T T T G A C A C T T T A A T G A A G T G G A C A A A A T A G T T A A C A C A C A C A C A C A C A C A A C T T A T C A</p>
+          </li>
+          <li><p>Count the A, C, T, G count in the sequence and plot a pie diagram using ‘Plotly’</p>
+          <p>Eg:</p>
+          <p>A= 235</p>
+          <p>G= 103</p>
+          <p>C= 77</p>
+          <p>T= 134</p>
+          </li>
+          <li><p>Calculate the percentage of AT- content and GC-content in the sequence using the equation</p>
+          <p>GC-content= (G + C / A + T + G + C) * 100%</p>
+          <p>AT-content= (A + T / A + T + G + C) * 100%</p>
+          <p>Eg:</p>
+          <p>AT-content (%) = 67.21311475409836</p>
+          <p>GC-content (%) = 32.78688524590164</p>
+          </li>
+          <li><p>Join the array to do case conversion. According to user’s request case conversion can developed by using the methods ‘toUpperCase()’ (for converting the sequence to uppercase) and ‘toLowerCase’() (for converting the sequence to lowercase).</p>
+          <p>Eg:</p>
+          <p>Uppercase: 
+          TTTCTGCCAGGACTCTTGATGATGTGCGGTTTGCTTTCAGGGATAGGAAGATAAAAACGCTAAAAGAAGACAAAAATATTAACACAATAATAAAAAAAAAAAGCCAGAAAAAATAGTAGTTTTTCAAGAACACTTCAGAATCCTGATACTTT……</p>
+          <p>Lowercase:
+          tttctgccaggactcttgatgatgtgcggtttgctttcagggataggaagataaaaacgctaaaagaagacaaaaatattaacacaataataaaaaaaaaaagccagaaaaaatagtagtttttcaagaacacttcagaatcctgatacttt……</p>
+          </li>
+          <li><p>For reverse compliment, create a new array (Array_2). From the last element of Array_1 to the first element, replace and push all ‘A’ with ‘T’, wise versa and replace all ‘G’ with ‘C’, wise versa into Array_2.</p>
+          <p>Eg:</p>
+          <p>Array_2=
+          T G A T A A G T T G T G T G T G T G T G T G T G T T A A C T A T T T T G T C C A C T T C A T T A A A G T G T C A A A A T T A G T G C T A A A G A A T T G T T C A T A A C A T C T A T T A T A T T C T G AT A T  T…..</p>
+          </li>
+          <li><p>Join the Array_2.</p>
+          <p>Eg:</p>
+          <p>Reverse compliment:
+          TGATAAGTTGTGTGTGTGTGTGTGTTAACTATTTTGTCCACTTCATTAAAGTGTCAAAATTAGTGCTAAAGAATTGTTCATAACATCTATTATATTCTGATATTCATAATTTCTGTCTGTATTAAT…….</p>
+          </li>
+          </ol>
+          <ol start="11">
+          <li><p>To create RNA for the sequence, replace all the ‘T’ with ‘U’ in Array_2 and save that into a new array (Array_3).</p>
+          <p>Eg:</p>
+          <p>Array_3=
+          U G A U A A G U U G U G U G U G U G U G U G U G U U A A C U A U U U UG U C C A C U U C A U U A A A G U G U C A A A A U U A G U G C U A A A G A A U U G U U C A U A A CA U C U A U U A U A U U C U G A U A U U C A U A A U U U C U G U C U G U A U U A A U……</p>
+          </li>
+          <li><p>Join the Array_3.</p>
+          <p>Eg:</p>
+          <p>RNA=
+          UGAUAAGUUGUGUGUGUGUGUGUGUUAACUAUUUUGUCCACUUCAUUAAAGUGUCAAAAUUAGUGCUAAAGAAUUGUUCAUAACAUCUAUUAUAUUCUGAUAUUCAUAAUUUCUGUCUGUAUUAAU…..</p>
+          </li>
+          </ol>
+          <p><strong>Input Data Collection &amp; Analysis:</strong></p>
+          <p>The DNA sequence in FASTA format in <strong>.txt format</strong> serves as the simulation's input data.</p>
+          <p><strong>Model Translation:</strong></p>
+          <p>Interface of the simulator can be developed in HTML as it is light weighted and fast to load, and every browser supports HTML. CSS was used to help style the html elements and JavaScript was used as the programming language to create dynamic and interactive web content.</p>
+          
+          </div>
+              <div class="bug-report-mobile">
+                  <bug-report id="bug-report" title="[BUG REPORT] TO ANALYZE THE SEQUENCE OF A GIVEN DNA AND FIND OUT SEQUENCE COMPOSITION" page-type="text" context-info="{&quot;organisation&quot;:&quot;Virtual Labs&quot;,&quot;developer_institute&quot;:&quot;AU&quot;,&quot;expname&quot;:&quot;TO ANALYZE THE SEQUENCE OF A GIVEN DNA AND FIND OUT SEQUENCE COMPOSITION&quot;,&quot;labname&quot;:&quot;Virtual Lab&quot;,&quot;phase&quot;:&quot;Testing&quot;}" checkbox-json="{&quot;text&quot;:[&quot;Insufficient Content&quot;],&quot;video&quot;:[&quot;Insufficient Content&quot;],&quot;assesment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;simulation&quot;:[&quot;Simulation Not Working&quot;,&quot;Incorrect Results/Observations&quot;,&quot;Insufficient/Incorrect Instructions&quot;],&quot;DEFAULT&quot;:[&quot;Page Not Loading&quot;,&quot;Content Not Visible&quot;,&quot;Incorrect Content&quot;]}" position="override" button_style="
+                          position: fixed; 
+                          bottom: 20px;
+                          right: 20px;
+                          z-index: 1;
+                          font-size: 0;
+                          padding: 25px;
+                          border-radius: 50%;
+                          border: none;
+                          background-color: #0fc0ff;
+                          background-image: url(data:image/png;base64,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);
+                          background-repeat: no-repeat;
+                          background-position: center;
+                          background-size: 30px;
+                          filter: invert(1);
+                      "></bug-report>
+              </div>
+        </div>
+      </div>
+      <footer class="text-light pt-2 vlabs-footer d-flex flex-column">
+        <div class="row px-5 mx-0">
+          <div class="col d-flex flex-column">
+            <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Community Links</span>
+            <a href="https://www.sakshat.ac.in/" class="text-light">Sakshat Portal</a>
+            <a href="http://outreach.vlabs.ac.in/" class="text-light">Outreach Portal</a>
+            <a href="https://vlab.co.in/faq" class="text-light">FAQ: Virtual Labs</a>
+          </div>
+          <div class="col d-flex flex-column">
+            <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Contact Us</span>
+            <span> Phone: General Information: 011-26582050 </span>
+            <span> Email: support@vlabs.ac.in </span>
+          </div>
+          <div class="col d-flex flex-column">
+            <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Follow Us</span>
+            <div class="social-links">
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #55acee;" href="https://twitter.com/TheVirtualLabs">
+      	  <i class="fa fa-twitter"></i>
+      	</a>
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #3b5998;" href="https://www.facebook.com/Virtual-Labs-IIT-Delhi-301510159983871/">
+      	  <i class="fa fa-facebook"></i>
+      	</a>
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #e52d27;" href="https://www.youtube.com/watch?v=asxRaOgk6a0">
+      	  <i class="fa fa-youtube"></i>
+      	</a>
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #2867B2;" href="https://in.linkedin.com/in/virtual-labs-008ba9136">
+      	  <i class="fa fa-linkedin"></i>
+      	</a>
+            </div>
+          </div>
+        </div>
+        <div class="m-0 py-2 text-center" style="font-family: &quot;Open Sans&quot;, sans-serif; background: #212121;">
+          <a class="text-primary font-weight-bold" href="https://www.gnu.org/licenses/agpl-3.0.en.html"> AGPL 3.0 </a>
+          &nbsp;&amp;&nbsp;
+          <a class="text-primary font-weight-bold" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"> Creative Commons (CC BY-NC-SA 4.0) </a>
+        </div>
+      </footer>
+    <script src="./assets/js/toggleSidebar.js"></script>
+    <script src="./assets/js/event-handler.js"></script>    
+  
+
+<script type="module" src="https://virtual-labs.github.io/svc-bug-report/client/src/bug-report.js"></script></body></html>
