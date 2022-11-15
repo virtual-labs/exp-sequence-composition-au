@@ -1,8 +1,8 @@
 ### Steps to follow for working the simulator
 
-1.	Click the button “Select a DNA sequence”. User can select the sequence of interest in .txt format from the specific folder in personal computer. When the user select the file, the filename will be displayed in the textbox provided in the interface. 
+1.	Click the button “Select a DNA sequence” to select a DNA sequence of interest in **.txt format** from the specific folder in personal computer. When the user select the file, the filename will be displayed in the textbox provided in the interface. 
 
-<img src="images/2.png" title="" />
+<center><img src="images/2.png" title="" /></center>
 
 &nbsp; 
 
