@@ -11,9 +11,10 @@
 The goal of proposed virtual laboratories is to achieve a conceptual understanding of standard protocols and tools in biotechnology and biomedical engineering at an advanced level that may be useful in interdisciplinary fields of science and technology.
   
 With this experiment, the user can
-  1. Learn to analyze the general compositional features of a given DNA sequence.
+
+  1. Analyze the general compositional features of a given DNA sequence.
   2. Quantitatively evaluate genome organization and biological functions of the genome in a broader sense
-  3. Apply  knowledge on sequence composition for molecular biology experiments 
+  3. Apply knowledge on sequence composition for molecular biology experiments
 
 
 
@@ -31,3 +32,5 @@ SrNo | Name | Faculty or Student | Department| Institute | Email id
 2 | Rakhi Radhamani | Research Assistant | Amrita Virtual Labs | Amrita Vishwa Vidyapeetham | rakhir@am.amrita.edu
 3 | Sreelekshmi S | Research Assistant | Amrita Virtual Labs | Amrita Vishwa Vidyapeetham | sreelekshmis@am.amrita.edu 
 4 | Nijin N | Research Assistant | Amrita Virtual Labs | Amrita Vishwa Vidyapeetham | nijinn@am.amrita.edu
+5 | Dhanush Kumar | Research Assistant| Amrita Virtual Labs | Amrita Vishwa Vidyapeetham | dhanushkumar@am.amrita.edu
+
